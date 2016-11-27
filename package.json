@@ -1,23 +1,24 @@
 {
-    "name": "MileHighChauffeur",
-    "version": "1.0.3",
-    "private": false,
-    "author": "Peter Hendrick",
-    "devDependencies": {
-    },
-    "engines": {
-        "node": "6.5.0",
-        "npm": "3.10.6"
-    },
-    "scripts": {
-        "test": "grunt test",
-        "postinstall": "bower install"
-    },
-    "dependencies": {
-        "bower": "latest",
-        "express": "latest"
-    },
-    "cacheDirectories": [
-        "node_modules"
-    ]
+  "name": "MileHighChauffeur",
+  "version": "1.0.3",
+  "private": false,
+  "author": "Peter Hendrick",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "engines": {
+    "node": "6.5.0",
+    "npm": "3.10.6"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "bower": "latest",
+    "express": "latest"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
 }
