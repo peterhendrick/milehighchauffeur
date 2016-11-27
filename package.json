@@ -4,7 +4,8 @@
   "private": false,
   "author": "Peter Hendrick",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4"
   },
   "engines": {
     "node": "6.5.0",
