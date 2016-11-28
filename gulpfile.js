@@ -16,19 +16,32 @@ let gulp = require('gulp'),
         'index.html'
     ];
 
+gulp.task('bowerInstall', () => {
+    return bower();
+});
+
 gulp.task('clean', () => {
     return gulp.src('dist/', {read: false})
         .pipe(clean());
-});
-
-gulp.task('bowerInstall', () => {
-    return bower();
 });
 
 gulp.task('deployPeter', ['bowerInstall', 'clean'], () => {
     return gulp.src(sourceFiles, {base: '.'})
         .pipe(ghPages({
             remoteUrl: 'https://github.com/peterhendrick/peterhendrick.github.io',
+            origin: 'origin',
+            branch: 'master',
+            cacheDir: 'dist/',
+            push: true ,
+            force: true,
+            message: 'Gulp Deployment'
+        }))
+});
+
+gulp.task('deploy', ['bowerInstall', 'clean'], () => {
+    return gulp.src(sourceFiles, {base: '.'})
+        .pipe(ghPages({
+            remoteUrl: 'https://github.com/ThomasHendrick/ThomasHendrick.github.io',
             origin: 'origin',
             branch: 'master',
             cacheDir: 'dist/',
