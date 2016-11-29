@@ -44,7 +44,7 @@
     <div class="paddRow contactRow">
         <div class="wrap">
             <div class="head">Contact Us</div>
-            <img class="close" src="images/close.png" ng-click="closeForm()" />
+            <img id="contactCloseButton" class="close" src="images/close.png" ng-click="closeForm()" />
             <form action="https://formspree.io/thomas@milehighchauffeur.com" method="POST">
                 <input class="input" required="required" type="text" name="name" placeholder="Your Name" ng-model="contactName">
                 <input class="input email" required="required" type="email" name="_replyto" placeholder="Your Email" ng-model="email"/><br />
@@ -52,7 +52,7 @@
                 <input type="hidden" name="_subject" value="Mile High Chauffeur Submission!" />
                 <textarea class="textarea" rows="5" name="message" required="required" placeholder="Your Message" ng-model="message"></textarea>
                 <input type="hidden" name="_next" value="http://www.milehighchauffeur.com/#/thank-you" />
-                <input class="input button" type="submit" value="Send">
+                <input id="submitButton" class="input button" type="submit" value="Send">
             </form>
 
             <!-- contact us form response messages -->
