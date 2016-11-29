@@ -2,16 +2,9 @@
 
 require('protractor');
 
-let url = 'http://milehighchauffeur.com';
+let url = process.env.URL_TO_TEST || 'http://localhost:8080';
 
 describe('milehighchauffeur.com', () => {
-    beforeEach(() => {
-
-    });
-
-    afterEach(() => {
-
-    });
     it('should display all elements on landing page', () => {
         browser.get(url);
         browser.waitForAngular();
@@ -104,11 +97,10 @@ describe('milehighchauffeur.com', () => {
     });
 
     // _goHome()
-});
-
-function _goHome() {
-    it('should go home', () => {
-        browser.get(url);
-        browser.waitForAngular();
-    });
-}
+    function _goHome() {
+        it('should go home', () => {
+            browser.get(url);
+            browser.waitForAngular();
+        });
+    }
+})
