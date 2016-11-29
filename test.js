@@ -2,7 +2,7 @@
 
 require('protractor');
 
-let url = 'http://localhost:8080';
+let url = 'http://milehighchauffeur.com';
 
 describe('milehighchauffeur.com', () => {
     beforeEach(() => {
@@ -33,7 +33,7 @@ describe('milehighchauffeur.com', () => {
     it('should navigate to airport link', () => {
         element(by.id('airportLink')).click();
         browser.waitForAngular();
-        browser.sleep(700);
+        browser.sleep(800);
         expect(element(by.id('airportPagePhoto')).isDisplayed()).toBeTruthy();
     });
 
@@ -46,7 +46,7 @@ describe('milehighchauffeur.com', () => {
     it('should navigate to corporate travel link', () => {
         element(by.id('corporateTravelLink')).click();
         browser.waitForAngular();
-        browser.sleep(700);
+        browser.sleep(800);
         expect(element(by.id('corporatePagePhoto')).isDisplayed()).toBeTruthy();
     });
 
@@ -55,7 +55,7 @@ describe('milehighchauffeur.com', () => {
     it('should navigate to ski page link', () => {
         element(by.id('skiPageLink')).click();
         browser.waitForAngular();
-        browser.sleep(700);
+        browser.sleep(800);
         expect(element(by.id('skiPagePhoto')).isDisplayed()).toBeTruthy();
     });
 
