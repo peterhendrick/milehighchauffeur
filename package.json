@@ -5,9 +5,11 @@
   "author": "Peter Hendrick",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-angular-protractor": "^0.2.0",
     "gulp-bower": "0.0.13",
     "gulp-clean": "^0.3.2",
-    "gulp-gh-pages": "^0.5.4"
+    "gulp-gh-pages": "^0.5.4",
+    "protractor": "^4.0.11"
   },
   "engines": {
     "node": "6.5.0",
