@@ -23,8 +23,8 @@ gulp.task('bowerInstall', () => {
     return bower();
 });
 
-gulp.task('protractor', ['bowerInstall'], (callback) => {
-    gulp.src(['test.js'])
+gulp.task('protractor', (callback) => {
+    return gulp.src(['test.js'])
         .pipe(protractor({
             'configFile': 'conf.js',
             'debug': false,
@@ -36,7 +36,9 @@ gulp.task('protractor', ['bowerInstall'], (callback) => {
             console.log(e);
             process.exit(1);
         })
-        .on('end', () => callback);
+        .on('end', () => {
+            console.log('Protractor tests pass');
+        });
 });
 
 gulp.task('clean', ['protractor'], () => {
@@ -44,12 +46,12 @@ gulp.task('clean', ['protractor'], () => {
         .pipe(clean());
 });
 
-gulp.task('deployPeter', ['clean'], () => {
+gulp.task('deployPeter', ['bowerInstall', 'clean'], () => {
     return gulp.src(sourceFiles, {base: '.'})
         .pipe(ghPages(_options(peterGhRemote)));
 });
 
-gulp.task('deploy', ['clean'], () => {
+gulp.task('deploy', ['bowerInstall', 'clean'], () => {
     return gulp.src(sourceFiles, {base: '.'})
         .pipe(ghPages(_options(thomasGhRemote)));
 });
