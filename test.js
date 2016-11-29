@@ -81,25 +81,25 @@ describe('milehighchauffeur.com', () => {
     it('should open contact form', () => {
         element(by.id('contactBtn')).click();
         browser.waitForAngular();
-        browser.sleep(400);
+        browser.sleep(500);
         expect(element(by.id('submitButton')).isDisplayed()).toBeTruthy();
     });
 
     it('should close contact form', () => {
         element(by.id('contactCloseButton')).click();
         browser.waitForAngular();
-        browser.sleep(400);
+        browser.sleep(500);
         expect(element(by.id('submitButton')).isDisplayed()).toBeFalsy();
     });
 
     it('should navigate away from contact form', () => {
         element(by.id('contactBtn')).click();
         browser.waitForAngular();
-        browser.sleep(400);
+        browser.sleep(500);
         expect(element(by.id('submitButton')).isDisplayed()).toBeTruthy();
         element(by.id('headerLogo')).click();
         browser.waitForAngular();
-        browser.sleep(400);
+        browser.sleep(500);
         expect(element(by.id('submitButton')).isDisplayed()).toBeFalsy();
     });
 
