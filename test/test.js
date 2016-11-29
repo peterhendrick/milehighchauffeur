@@ -16,11 +16,57 @@ describe('milehighchauffeur.com', () => {
         expect(element(by.id('contactBtn')).isDisplayed()).toBeTruthy();
 
         expect(element(by.id('home')).isDisplayed()).toBeTruthy();
+        expect(element(by.id('homePreviousSlide')).isEnabled()).toBeTruthy();
+        expect(element(by.id('homeNextSlide')).isEnabled()).toBeTruthy();
         expect(element(by.id('skiPageLink')).isDisplayed()).toBeTruthy();
         expect(element(by.id('corporateTravelLink')).isDisplayed()).toBeTruthy();
         expect(element(by.id('airportLink')).isDisplayed()).toBeTruthy();
 
         expect(element(by.id('copyright')).isDisplayed()).toBeTruthy();
+        done();
+    });
+
+    it('should get carousel to work', (done) => {
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeTruthy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeFalsy();
+
+        element(by.id('homeNextSlide')).click();
+        browser.sleep(600);
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeTruthy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeFalsy();
+
+        element(by.id('homeNextSlide')).click();
+        browser.sleep(600);
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeTruthy();
+
+        element(by.id('homeNextSlide')).click();
+        browser.sleep(600);
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeTruthy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeFalsy();
+
+        element(by.id('homePreviousSlide')).click();
+        browser.sleep(600);
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeTruthy();
+
+        element(by.id('homePreviousSlide')).click();
+        browser.sleep(600);
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeTruthy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeFalsy();
+
+        element(by.id('homePreviousSlide')).click();
+        browser.sleep(600);
+        expect(element(by.id('monumentImage')).isDisplayed()).toBeTruthy();
+        expect(element(by.id('carAndJetImage')).isDisplayed()).toBeFalsy();
+        expect(element(by.id('denverImage')).isDisplayed()).toBeFalsy();
+
         done();
     });
 
@@ -115,4 +161,4 @@ describe('milehighchauffeur.com', () => {
             done();
         });
     }
-})
+});

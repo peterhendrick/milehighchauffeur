@@ -3,12 +3,12 @@
 exports.config = {
     seleniumServerJar: '/usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-2.53.1.jar',
 
-    // directConnect: true,
+    directConnect: true,
 
     chromeDriver: '/usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.25',
 
     specs: [
-        './test.js'
+        './test/test.js'
     ],
 
     exclude: [
@@ -22,9 +22,11 @@ exports.config = {
     },
 
     capabilities: {
-        'browserName': 'chrome',
         // 'browserName': 'phantomjs',
-        // 'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs',
+        // 'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
+        // 'browserName': 'safari'
+        // 'browserName': 'firefox'
+        'browserName': 'chrome',
         'chromeOptions': {
             'args': [
                 'incognito',
@@ -38,7 +40,9 @@ exports.config = {
 
     resultJsonOutputFile: null,
     restartBrowserBetweenTests: false,
-    plugins: '',
+    plugins: [
+
+    ],
 
 
     beforeLaunch: function() {
