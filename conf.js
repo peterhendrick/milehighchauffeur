@@ -87,29 +87,30 @@ exports.config = {
     //         'browserName': 'safari'
     //     }
     // ],
-    jasmineNodeOpts: {
-        // If true, display spec names.
-        isVerbose: true,
-        // If true, print colors to the terminal.
-        showColors: true,
-        // If true, include stack traces in failures.
-        includeStackTrace: true,
-        // Default time to wait in ms before a test fails.
-        defaultTimeoutInterval: 20000
-    }
+    // jasmineNodeOpts: {
+    //     // If true, display spec names.
+    //     isVerbose: true,
+    //     // If true, print colors to the terminal.
+    //     showColors: true,
+    //     // If true, include stack traces in failures.
+    //     includeStackTrace: true,
+    //     // Default time to wait in ms before a test fails.
+    //     defaultTimeoutInterval: 20000
+    // }
+
     // For Jasmine 2 Framework
-    //jasmineNodeOpts: {
-    //    // If true, print colors to the terminal.
-    //    showColors: true,
-    //    // Default time to wait in ms before a test fails.
-    //    defaultTimeoutInterval: 120000
-    //    // Function called to print jasmine results.
-    //    // print: function() {},
-    //    // If set, only execute specs whose names match the pattern, which is
-    //    // internally compiled to a RegExp.
-    //    // grep: 'pattern',
-    //    // Inverts 'grep' matches
-    //    // invertGrep: false
-    //}
+    jasmineNodeOpts: {
+       // If true, print colors to the terminal.
+       showColors: true,
+       // Default time to wait in ms before a test fails.
+       defaultTimeoutInterval: 20000
+       // Function called to print jasmine results.
+       // print: function() {},
+       // If set, only execute specs whose names match the pattern, which is
+       // internally compiled to a RegExp.
+       // grep: 'pattern',
+       // Inverts 'grep' matches
+       // invertGrep: false
+    }
 };
 
