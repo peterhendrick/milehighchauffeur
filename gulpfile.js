@@ -1,10 +1,11 @@
 'use strict';
 
-let gulp = require('gulp'),
+const gulp = require('gulp'),
     ghPages = require('gulp-gh-pages'),
     bower = require('gulp-bower'),
     clean = require('gulp-clean'),
     protractor = require('gulp-angular-protractor'),
+    gulpTaskListing = require('gulp-task-listing'),
     peterGhRemote = 'https://github.com/peterhendrick/peterhendrick.github.io',
     thomasGhRemote = 'https://github.com/ThomasHendrick/ThomasHendrick.github.io',
     sourceFiles = [
@@ -19,11 +20,13 @@ let gulp = require('gulp'),
         'index.html'
     ];
 
+gulp.task('help', gulpTaskListing);
+
 gulp.task('bowerInstall', () => {
     return bower();
 });
 
-gulp.task('protractor', (callback) => {
+gulp.task('protractor', () => {
     return gulp.src(['test.js'])
         .pipe(protractor({
             'configFile': 'conf.js',
