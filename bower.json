@@ -1,7 +1,7 @@
 {
   "name": "mile-high-chauffeur",
   "description": "A chauffeur website.",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "homepage": "https://www.milehighchauffeur.com",
   "license": "MIT",
   "private": true,

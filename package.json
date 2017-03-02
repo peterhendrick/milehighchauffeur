@@ -1,6 +1,6 @@
 {
   "name": "MileHighChauffeur",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "author": "Peter Hendrick",
   "devDependencies": {
@@ -9,10 +9,11 @@
     "gulp-bower": "0.0.13",
     "gulp-clean": "^0.3.2",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-task-listing": "^1.0.1",
     "protractor": "^4.0.11"
   },
   "engines": {
-    "node": "6.5.0",
+    "node": "6.10.0",
     "npm": "3.10.6"
   },
   "scripts": {
